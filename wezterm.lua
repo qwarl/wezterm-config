@@ -21,7 +21,7 @@ config.enable_tab_bar = false
 -- set new keybinds
 table.insert(keys, {
 	key = "w",
-	mods = "CTRL",
+	mods = "CTRL|ALT",
 	action = wezterm.action.CloseCurrentPane({ confirm = false }),
 })
 config.keys = keys
