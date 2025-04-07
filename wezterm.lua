@@ -13,6 +13,24 @@ if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 		label = "PowerShell",
 		args = { "pwsh.exe" },
 	})
+
+	-- config for neovim completion
+	table.insert(keys, {
+		key = "Enter",
+		mods = "SHIFT",
+		action = wezterm.action.SendKey({
+			key = "Enter",
+			mods = "SHIFT",
+		}),
+	})
+	table.insert(keys, {
+		key = "Space",
+		mods = "CTRL",
+		action = wezterm.action.SendKey({
+			key = "Space",
+			mods = "CTRL",
+		}),
+	})
 end
 config.launch_menu = launch_menu
 
