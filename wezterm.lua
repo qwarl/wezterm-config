@@ -42,6 +42,11 @@ table.insert(keys, {
 	mods = "CTRL|ALT",
 	action = wezterm.action.CloseCurrentPane({ confirm = false }),
 })
+table.insert(keys, {
+	key = "`",
+	mods = "CTRL|ALT",
+	action = wezterm.action.ShowLauncher,
+})
 config.keys = keys
 
 -- setup smart splits (move and resize like neovim config)
