@@ -5,7 +5,12 @@ local launch_menu = {}
 local keys = {}
 
 config.color_scheme = "Gruvbox Dark (Gogh)"
-config.font = wezterm.font("CaskaydiaMono NFM")
+config.font_size = 14
+config.font = wezterm.font_with_fallback({
+	"Maple Mono NL NF CN",
+	"CaskaydiaMono NFM",
+	"Jigmo",
+})
 
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 	config.default_prog = { "pwsh.exe" }
